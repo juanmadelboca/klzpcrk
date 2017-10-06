@@ -9,6 +9,7 @@ setup(name='klzpcrk',
       description='Aplication to crack zip passwords',
       author='Del Boca Juan Manuel',
       author_email='juanmadelboca@gmail.com',
-      packages=['dictionary'],
+      packages=['dictionary',
+                'klzipcrk'],
       install_requires=reqs,
       test_suite='nose.collector')
