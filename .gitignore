@@ -1,5 +1,8 @@
 .DS_Store
 .vscode/
+#files
+*.zip
+*.txt
 
 #logfiles
 *.log
