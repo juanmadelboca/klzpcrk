@@ -12,7 +12,7 @@ class Klzipcrk(object):
     def crack_password(self):
         for line in self.passFile.readlines():
             password = line.rstrip()
-            print "attempting with:", password
+            # print "attempting with:", password
             if(self.__extract_zip__(password)):
                 raise SystemExit
         # p=mp.Pool(8)
