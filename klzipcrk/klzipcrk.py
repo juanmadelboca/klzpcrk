@@ -14,7 +14,7 @@ class Klzipcrk(object):
             password = line.rstrip()
             print "attempting with:", password
             if(self.__extract_zip__(password)):
-                raise Exception("password found")
+                raise SystemExit
         # p=mp.Pool(8)
         # p.map(extract_zip, zFile, passFile.readlines())
         # p.close()
