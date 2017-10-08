@@ -12,10 +12,9 @@ class Klzipcrk(object):
     def crack_password(self):
         for line in self.passFile.readlines():
             password = line.rstrip()
-            print password
+            print "attempting with:", password
             if(self.__extract_zip__(password)):
-                print "finish"
-                break
+                raise Exception("password found")
         # p=mp.Pool(8)
         # p.map(extract_zip, zFile, passFile.readlines())
         # p.close()
@@ -25,6 +24,6 @@ class Klzipcrk(object):
         try:
             self.zFile.extractall(pwd=password)
             print "[+] Password Found: " + password + '\n'
-            exit(0)
+            return True
         except:
-            pass
+            return False
